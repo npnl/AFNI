@@ -1,0 +1,18 @@
+#! /usr/bin/perl
+{
+# Script Name: obreg
+# PUT NAME OF FUNCTIONAL BRIK HERE
+$func = "INPLANE";
+# PUT NAME OF ANATOMICAL BRIK HERE
+$anat = "ANAT";
+# PUT NAME OF ROTATED ANATOMICAL BRIK HERE
+$anatout = "ANAT_rot";
+# INDICATE DIRECTORY WITH BRIKS HERE
+$sdir = ".";
+$command1 = "matlab -nojvm -nosplash -r ";
+$command2= "\"Oblique_Reg(\'$sdir\',\'$func\',\'$anat\',\'$anatout\');quit\"";
+$command = "$command1 $command2";
+print "$command\n";
+system($command);
+print "DONE WITH ROTATION\n"
+}

@@ -1,0 +1,17 @@
+#!/bin/csh
+
+
+foreach subject (am041609 aw043009 ec041709 es041509 gg043009 jf042809 lk041509 mj043009 ng041609 rb041409 sk041709 sm042709)
+
+
+#_____________
+
+
+foreach condition (0 3)
+
+3dROIstats -mask_f2short -mask Analysis_ROI_HC+DN/HC+DN+tlrc -nzmean \
+Group_ROI_AM/Brewer_${subject}_bucket_ms_AM_short_postDemons+tlrc'[${condition}]' >>Analysis_ROI_HC+DN/3dROIstats_AMbucket_postDemons.txt
+
+end
+
+end

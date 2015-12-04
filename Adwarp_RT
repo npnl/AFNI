@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# Filename: waver3dDeconvolve.sh
+# Purpose: Run preprocessing steps; Run waver to produce ideal response
+#          function (IRF); Run 3dDeconvolve to obtain parameter estimates
+#          and calculate contrasts for PA Recall experiment.
+# Created: 6/20/06
+# Creator: Tyler Seibert
+# Usage: ./waver3dDeconvolve.sh
+
+ver=ms # This version mark is appended to data sets written by this script
+
+selectSubdir()
+{
+    echo "Which subject do you want to analyze?"
+    echo "Please enter the name of the subject's directory"
+    select subdir in Brewer_*; do
+	if [ $subdir ]; then
+	    break
+	else
+	    echo 'invalid selection'
+	fi
+    done
+}
+
+fs4
+
+cd /space/mdj1/1/data/sarah/Memory_Strength
+echo "pwd is $PWD"
+selectSubdir
+cd $subdir/${subdir}_ROI
+echo "working in $PWD"
+rm ${subdir}_bucket_RT_${ver}* 
+rm ${subdir}_bucket_RT_${ver}_postDemons* 
+cd ../AFNIfiles
+
+adwarp -apar ANAT_rot+tlrc -dpar bucket_RT_${ver}+orig \
+-prefix /space/mdj1/1/data/sarah/Memory_Strength/${subdir}/${subdir}_ROI/${subdir}_bucket_RT_${ver} \
+-dxyz 4.0 -thr NN -func Bk

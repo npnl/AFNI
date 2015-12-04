@@ -1,0 +1,29 @@
+#!/bin/tcsh
+#
+#run in Analysis_FC
+@ i = 0
+
+#done for p=.05 (4.132)
+
+
+
+#.05
+
+3dmerge \
+-1thresh 4.132 \
+-1clust 7.0 300 \
+-1dindex 0 \
+-1tindex 3 \
+-prefix Clust_RegAna.05_1S-2R-3RC_7-300_12subj \
+RegAna_1S_2R_3RC_12subj+tlrc
+
+3dmerge \
+-1thresh 4.132 \
+-1clust_order 7.0 300 \
+-1dindex 0 \
+-1tindex 3 \
+-prefix Clustorder_RegAna.05_1S-2R-3RC_7-300_12subj \
+RegAna_1S_2R_3RC_12subj+tlrc
+
+3dclust -1dindex 0 -1tindex 3 -1thresh 4.132 -prefix Clust_RegAna.05_1S-2R-3RC_7-300_12subj 7.0 300 RegAna_1S_2R_3RC_12subj+tlrc > Tables/Clust_RegAna.05_1S-2R-3RC_7-300_12subj+tlrc.txt
+

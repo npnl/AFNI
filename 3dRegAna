@@ -1,0 +1,48 @@
+cd ../Group/Mean_runs
+
+set PWD = pwd
+echo "working in ${PWD}"
+
+3dRegAna -rows 33 -cols 2 \
+-xydata 1 18 '020205b_O+tlrc[4]' \
+-xydata 1 4 '020405b_O+tlrc[4]' \
+-xydata 1 -2 '021605b_O+tlrc[4]' \
+-xydata 1 15 '030405b_O+tlrc[4]' \
+-xydata 1 28 '031105b_O+tlrc[4]' \
+-xydata 1 -49 '032205c_O+tlrc[4]' \
+-xydata 1 -15 '060105b_O+tlrc[4]' \
+-xydata 1 -44 '060905b_O+tlrc[4]' \
+-xydata 1 -142 '061405b_O+tlrc[4]' \
+-xydata 1 23 '072204b_O+tlrc[4]' \
+-xydata 1 -47 '072304b_O+tlrc[4]' \
+-xydata 1 -40 '080205b_O+tlrc[4]' \
+-xydata 1 46 '091304b_O+tlrc[4]' \
+-xydata 1 99 '092805c_O+tlrc[4]' \
+-xydata 1 94 '100605b_O+tlrc[4]' \
+-xydata 1 24 '101104b_O+tlrc[4]' \
+-xydata 1 0 '101804b_O+tlrc[4]' \
+-xydata 2 32 '021005b_O+tlrc[4]' \
+-xydata 2 -294 '021505c_O+tlrc[4]' \
+-xydata 2 -13 '022105b_O+tlrc[4]' \
+-xydata 2 -11 '030605b_O+tlrc[4]' \
+-xydata 2 -109 '030705b_O+tlrc[4]' \
+-xydata 2 -189 '032905b_O+tlrc[4]' \
+-xydata 2 -31 '062804b_O+tlrc[4]' \
+-xydata 2 -175 '070104b_O+tlrc[4]' \
+-xydata 2 0 '070804b_O+tlrc[4]' \
+-xydata 2 -76 '071305b_O+tlrc[4]' \
+-xydata 2 -175 '072905b_O+tlrc[4]' \
+-xydata 2 -35 '100504b_O+tlrc[4]' \
+-xydata 2 -5 '101405b_O+tlrc[4]' \
+-xydata 2 -67 '101905b_O+tlrc[4]' \
+-xydata 2 -29 '111704c_O+tlrc[4]' \
+-xydata 2 -44 '112004b_O+tlrc[4]' \
+-model 2 1 : 0 \
+-workmem 128 \
+-bucket 6 ../Analyses/RegAna_PMonly_AttenOnly_33subj \
+-brick 0 coef 1 Group \
+-brick 1 tstat 1 "Group tstat" \
+-brick 2 coef 2 TDTdiff \
+-brick 3 tstat 2 "TDTdiff tstat" \
+-brick 4 rstat Rsq \
+-brick 5 fstat Fstat

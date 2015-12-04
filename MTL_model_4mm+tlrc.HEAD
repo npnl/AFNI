@@ -1,0 +1,111 @@
+
+type = string-attribute
+name = HISTORY_NOTE
+count = 282
+'[kirwan@squirelab.ucsd.edu: Mon Aug  4 21:46:21 2008] 3dcopy mtl_model_wb+tlrc. mtl_model_wb.nii\n[sarahi@ip83.ucsd.edu: Thu Oct  8 09:10:07 2009] 3dresample -master Analysis_ROIAL_5run/ic042208_R_1_iresp_postDemons+tlrc -prefix MTL_model_4mm -inset /home/sarahi/mtl_model_notp.nii~
+
+type = string-attribute
+name = TYPESTRING
+count = 15
+'3DIM_HEAD_ANAT~
+
+type = string-attribute
+name = IDCODE_STRING
+count = 27
+'AFN_KnhlmIYUqofexzbOMCrphg~
+
+type = string-attribute
+name = IDCODE_DATE
+count = 25
+'Thu Oct  8 09:10:07 2009~
+
+type = integer-attribute
+name = SCENE_DATA
+count = 8
+ 2 11 0 -999 -999
+ -999 -999 -999
+
+type = string-attribute
+name = LABEL_1
+count = 5
+'zyxt~
+
+type = string-attribute
+name = LABEL_2
+count = 5
+'zyxt~
+
+type = string-attribute
+name = DATASET_NAME
+count = 5
+'zyxt~
+
+type = integer-attribute
+name = ORIENT_SPECIFIC
+count = 3
+ 0 3 4
+
+type  = float-attribute
+name  = ORIGIN
+count = 3
+            -78            -79            -64
+
+type  = float-attribute
+name  = DELTA
+count = 3
+              4              4              4
+
+type  = float-attribute
+name  = IJK_TO_DICOM
+count = 12
+              4              0              0            -78              0
+              4              0            -79              0              0
+              4            -64
+
+type  = float-attribute
+name  = IJK_TO_DICOM_REAL
+count = 12
+              4              0              0            -78              0
+              4              0            -79              0              0
+              4            -64
+
+type  = float-attribute
+name  = BRICK_STATS
+count = 2
+              0            250
+
+type = integer-attribute
+name = DATASET_RANK
+count = 8
+ 3 1 0 0 0
+ 0 0 0
+
+type = integer-attribute
+name = DATASET_DIMENSIONS
+count = 5
+ 40 48 38 0 0
+
+type = integer-attribute
+name = BRICK_TYPES
+count = 1
+ 0
+
+type  = float-attribute
+name  = BRICK_FLOAT_FACS
+count = 1
+              0
+
+type = string-attribute
+name = BRICK_LABS
+count = 3
+'#0~
+
+type = string-attribute
+name = BRICK_KEYWORDS
+count = 1
+'~
+
+type = string-attribute
+name = BYTEORDER_STRING
+count = 10
+'LSB_FIRST~

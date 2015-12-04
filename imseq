@@ -1,0 +1,77 @@
+#! /usr/bin/perl
+{
+ use Shell;
+ use Cwd; # module for finding the current working directory
+$|=1;    # turn off I/O buffering
+
+print "\n";
+
+if ($#ARGV == -1) { # if no arguments are entered
+	instructions(); 
+print "\n";
+}
+else { # read in the arguments
+	for ($j=0; $j<$#ARGV+1; $j++) {
+		$tempdir = $ARGV[$j];
+		chomp($tempdir);
+		if ($tempdir eq "."){
+			$tempdir = &cwd
+		}
+		opendir(DIR,$tempdir) or die "$tempdir does not exist or I can't open it\n"; # check the directories inputted
+		closedir(DIR);
+		@dirlist = $tempdir;
+		foreach my $name (@dirlist) {
+			&ScanDirectory($name);
+			print "\n";
+		} 
+	}
+}
+
+sub ScanDirectory {
+    my ($p) = 0;
+	my ($workdir) = shift; 
+    my($startdir) = &cwd; # keep track of where we began
+	print "Processing Directory $workdir \n";
+    chdir($workdir) or die "\nUnable to enter dir $workdir:$!\n";
+    opendir(DIR, ".") or die "\nUnable to open $workdir:$!\n";
+    my @names = readdir(DIR);
+    closedir(DIR);
+	$command = "mkdir backupimg";
+	system ($command); 
+    foreach my $name (@names){
+        next if ($name eq "."); 
+        next if ($name eq "..");
+		next if ($name eq "backupimg");
+        if (-d $name){                     # is this a directory?
+            &ScanDirectory($name);
+            next;
+        }
+		#do something with file
+		if (grep(/\.MRDC\./, $name)){
+			$p = $p + 1;
+			$command = "cp $name backupimg/";
+			system ($command); 
+			$old_name = $name;
+			$name =~ s/i(.*)\.MRDC\.(.*)/i\.CFMRI\.$2/;
+			$num = "";
+			$num = sprintf("%5d", $2);
+			$num=~ tr/ /0/;
+			$name = "i$num\.CFMRI\.$2";
+			rename("$old_name", "$name") || die "Cannot rename $old_name: $!";
+		}
+		#done
+    }
+	print "     Directory $workdir has $p files processed \n"; # print size
+	$command = "rm -rf backupimg";
+	system ($command); 
+    chdir($startdir) or die "Unable to change to dir $startdir:$!\n";
+}
+
+sub instructions {
+print "This program renames and reorders the dicom files acquired on the GE 14x scanners at UCSD CFMRI.\n";
+  print "Usage: imseq [directories to convert] \n";
+  print "Example:  imseq directory1 directory2 directory3 \n\n";
+
+  }
+
+}

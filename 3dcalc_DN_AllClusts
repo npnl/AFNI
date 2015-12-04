@@ -1,0 +1,3 @@
+#!/bin/csh
+
+3dcalc -a Clust2+tlrc -b Clust3+tlrc -c Clust4+tlrc -d Clust5+tlrc -e Clust6+tlrc -f Clust7+tlrc -g Clust8+tlrc -h Clust11+tlrc -i Clust13+tlrc -j Clust14+tlrc -k Clust15+tlrc -l Clust16+tlrc -m Clust18+tlrc -n Clust19+tlrc -o Clust21+tlrc -p Clust22+tlrc -q Clust25+tlrc -r Clust26+tlrc -s Clust30+tlrc -t Clust31+tlrc -u Clust32+tlrc -v Clust33+tlrc -w Clust34+tlrc -x Clust36+tlrc -expr '(2*(a/a))+(3*(b/b))+(4*(c/c))+(5*(d/d))+(6*(e/e))+(7*(f/f))+(8*(g/g))+(11*(h/h))+(13*(i/i))+(14*(j/j))+(15*(k/k))+(16*(l/l))+(18*(m/m))+(19*(n/n))+(21*(o/o))+(22*(p/p))+(25*(q/q))+(26*(r/r))+(30*(s/s))+(31*(t/t))+(32*(u/u))+(33*(v/v))+(34*(w/w))+(36*(x/x))' -prefix DN_AllClust 

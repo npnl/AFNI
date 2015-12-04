@@ -1,0 +1,11 @@
+#!/bin/csh
+
+foreach subject (nb050308 dp042508 ic042208 lk042408 nv042908 qg042308 rb050108 sn042808 ee050308 jr050308 sr050508 mo050508)
+
+foreach condition (Red-Cor Red-Inc Blue-Cor Blue-Inc Green-Cor Green-Inc)
+
+3dbucket Analysis_ROIAL_submem/${subject}_submem_${condition}_iresp_postDemons+tlrc'[0..9]' -prefix Analysis_ROIAL_submem/${subject}_submem_${condition}_iresp_short_postDemons
+
+
+end
+end

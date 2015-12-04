@@ -1,0 +1,57 @@
+3dRegAna \
+-rows 48 \
+-cols 1 \
+-xydata 2 Group_ROI_RT_.5/Brewer_am041609_bucket_.5RT_ms_postDemons+tlrc'[334]' \
+-xydata 2 Group_ROI_RT_.5/Brewer_aw043009_bucket_.5RT_ms_postDemons+tlrc'[334]' \
+-xydata 2 Group_ROI_RT_.5/Brewer_ec041709_bucket_.5RT_ms_postDemons+tlrc'[334]' \
+-xydata 2 Group_ROI_RT_.5/Brewer_es041509_bucket_.5RT_ms_postDemons+tlrc'[334]' \
+-xydata 2 Group_ROI_RT_.5/Brewer_gg043009_bucket_.5RT_ms_postDemons+tlrc'[334]' \
+-xydata 2 Group_ROI_RT_.5/Brewer_jf042809_bucket_.5RT_ms_postDemons+tlrc'[334]' \
+-xydata 2 Group_ROI_RT_.5/Brewer_lk041509_bucket_.5RT_ms_postDemons+tlrc'[334]' \
+-xydata 2 Group_ROI_RT_.5/Brewer_mj043009_bucket_.5RT_ms_postDemons+tlrc'[334]' \
+-xydata 2 Group_ROI_RT_.5/Brewer_ng041609_bucket_.5RT_ms_postDemons+tlrc'[334]' \
+-xydata 2 Group_ROI_RT_.5/Brewer_rb041409_bucket_.5RT_ms_postDemons+tlrc'[334]' \
+-xydata 2 Group_ROI_RT_.5/Brewer_sk041709_bucket_.5RT_ms_postDemons+tlrc'[334]' \
+-xydata 2 Group_ROI_RT_.5/Brewer_sm042709_bucket_.5RT_ms_postDemons+tlrc'[334]' \
+-xydata 1 Group_ROI_RT_.5/Brewer_am041609_bucket_.5RT_ms_postDemons+tlrc'[340]' \
+-xydata 1 Group_ROI_RT_.5/Brewer_aw043009_bucket_.5RT_ms_postDemons+tlrc'[340]' \
+-xydata 1 Group_ROI_RT_.5/Brewer_ec041709_bucket_.5RT_ms_postDemons+tlrc'[340]' \
+-xydata 1 Group_ROI_RT_.5/Brewer_es041509_bucket_.5RT_ms_postDemons+tlrc'[340]' \
+-xydata 1 Group_ROI_RT_.5/Brewer_gg043009_bucket_.5RT_ms_postDemons+tlrc'[340]' \
+-xydata 1 Group_ROI_RT_.5/Brewer_jf042809_bucket_.5RT_ms_postDemons+tlrc'[340]' \
+-xydata 1 Group_ROI_RT_.5/Brewer_lk041509_bucket_.5RT_ms_postDemons+tlrc'[340]' \
+-xydata 1 Group_ROI_RT_.5/Brewer_mj043009_bucket_.5RT_ms_postDemons+tlrc'[340]' \
+-xydata 1 Group_ROI_RT_.5/Brewer_ng041609_bucket_.5RT_ms_postDemons+tlrc'[340]' \
+-xydata 1 Group_ROI_RT_.5/Brewer_rb041409_bucket_.5RT_ms_postDemons+tlrc'[340]' \
+-xydata 1 Group_ROI_RT_.5/Brewer_sk041709_bucket_.5RT_ms_postDemons+tlrc'[340]' \
+-xydata 1 Group_ROI_RT_.5/Brewer_sm042709_bucket_.5RT_ms_postDemons+tlrc'[340]' \
+-xydata 4 Group_ROI_RT_.5/Brewer_am041609_bucket_.5RT_ms_postDemons+tlrc'[343]' \
+-xydata 4 Group_ROI_RT_.5/Brewer_aw043009_bucket_.5RT_ms_postDemons+tlrc'[343]' \
+-xydata 4 Group_ROI_RT_.5/Brewer_ec041709_bucket_.5RT_ms_postDemons+tlrc'[343]' \
+-xydata 4 Group_ROI_RT_.5/Brewer_es041509_bucket_.5RT_ms_postDemons+tlrc'[343]' \
+-xydata 4 Group_ROI_RT_.5/Brewer_gg043009_bucket_.5RT_ms_postDemons+tlrc'[343]' \
+-xydata 4 Group_ROI_RT_.5/Brewer_jf042809_bucket_.5RT_ms_postDemons+tlrc'[343]' \
+-xydata 4 Group_ROI_RT_.5/Brewer_lk041509_bucket_.5RT_ms_postDemons+tlrc'[343]' \
+-xydata 4 Group_ROI_RT_.5/Brewer_mj043009_bucket_.5RT_ms_postDemons+tlrc'[343]' \
+-xydata 4 Group_ROI_RT_.5/Brewer_ng041609_bucket_.5RT_ms_postDemons+tlrc'[343]' \
+-xydata 4 Group_ROI_RT_.5/Brewer_rb041409_bucket_.5RT_ms_postDemons+tlrc'[343]' \
+-xydata 4 Group_ROI_RT_.5/Brewer_sk041709_bucket_.5RT_ms_postDemons+tlrc'[343]' \
+-xydata 4 Group_ROI_RT_.5/Brewer_sm042709_bucket_.5RT_ms_postDemons+tlrc'[343]' \
+-xydata 3 Group_ROI_RT_.5/Brewer_am041609_bucket_.5RT_ms_postDemons+tlrc'[349]' \
+-xydata 3 Group_ROI_RT_.5/Brewer_aw043009_bucket_.5RT_ms_postDemons+tlrc'[349]' \
+-xydata 3 Group_ROI_RT_.5/Brewer_ec041709_bucket_.5RT_ms_postDemons+tlrc'[349]' \
+-xydata 3 Group_ROI_RT_.5/Brewer_es041509_bucket_.5RT_ms_postDemons+tlrc'[349]' \
+-xydata 3 Group_ROI_RT_.5/Brewer_gg043009_bucket_.5RT_ms_postDemons+tlrc'[349]' \
+-xydata 3 Group_ROI_RT_.5/Brewer_jf042809_bucket_.5RT_ms_postDemons+tlrc'[349]' \
+-xydata 3 Group_ROI_RT_.5/Brewer_lk041509_bucket_.5RT_ms_postDemons+tlrc'[349]' \
+-xydata 3 Group_ROI_RT_.5/Brewer_mj043009_bucket_.5RT_ms_postDemons+tlrc'[349]' \
+-xydata 3 Group_ROI_RT_.5/Brewer_ng041609_bucket_.5RT_ms_postDemons+tlrc'[349]' \
+-xydata 3 Group_ROI_RT_.5/Brewer_rb041409_bucket_.5RT_ms_postDemons+tlrc'[349]' \
+-xydata 3 Group_ROI_RT_.5/Brewer_sk041709_bucket_.5RT_ms_postDemons+tlrc'[349]' \
+-xydata 3 Group_ROI_RT_.5/Brewer_sm042709_bucket_.5RT_ms_postDemons+tlrc'[349]' \
+-model 1 : 0 \
+-bucket 4 Analysis_ROI_RT_.5/RegAna_R-R+K-K+_12subj \
+-brick 0 coef 1 "Condition" \
+-brick 1 tstat 1 "Condition tstat" \
+-brick 2 rstat Rsq \
+-brick 3 fstat Fstat

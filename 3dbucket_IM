@@ -1,0 +1,47 @@
+#am
+3dbucket -prefix Group_ROI_IM/am041609_R_bucket -fbuc 'Group_ROI_IM/Brewer_am041609_bucket_ms_IM+tlrc[3..975(6)]'
+3dbucket -prefix Group_ROI_IM/am041609_K_bucket -fbuc 'Group_ROI_IM/Brewer_am041609_bucket_ms_IM+tlrc[982..1294(6)]' 
+
+#aw
+3dbucket -prefix Group_ROI_IM/aw043009_R_bucket -fbuc 'Group_ROI_IM/Brewer_aw043009_bucket_ms_IM+tlrc[3..897(6)]'
+3dbucket -prefix Group_ROI_IM/aw043009_K_bucket -fbuc 'Group_ROI_IM/Brewer_aw043009_bucket_ms_IM+tlrc[904..1078(6)]'
+
+#ec
+3dbucket -prefix Group_ROI_IM/ec041709_R_bucket -fbuc 'Group_ROI_IM/Brewer_ec041709_bucket_ms_IM+tlrc[3..825(6)]'
+3dbucket -prefix Group_ROI_IM/ec041709_K_bucket -fbuc 'Group_ROI_IM/Brewer_ec041709_bucket_ms_IM+tlrc[832..1204(6)]'
+
+#es
+3dbucket -prefix Group_ROI_IM/es041509_R_bucket -fbuc 'Group_ROI_IM/Brewer_es041509_bucket_ms_IM+tlrc[3..807(6)]'
+3dbucket -prefix Group_ROI_IM/es041509_K_bucket -fbuc 'Group_ROI_IM/Brewer_es041509_bucket_ms_IM+tlrc[814..1222(6)]'
+
+#gg
+3dbucket -prefix Group_ROI_IM/gg043009_R_bucket -fbuc 'Group_ROI_IM/Brewer_gg043009_bucket_ms_IM+tlrc[3..255(6)]'
+3dbucket -prefix Group_ROI_IM/gg043009_K_bucket -fbuc 'Group_ROI_IM/Brewer_gg043009_bucket_ms_IM+tlrc[262..628(6)]'
+
+#jf
+3dbucket -prefix Group_ROI_IM/jf042809_R_bucket -fbuc 'Group_ROI_IM/Brewer_jf042809_bucket_ms_IM+tlrc[3..1179(6)]'
+3dbucket -prefix Group_ROI_IM/jf042809_K_bucket -fbuc 'Group_ROI_IM/Brewer_jf042809_bucket_ms_IM+tlrc[1186..1336(6)]'
+
+#lk
+3dbucket -prefix Group_ROI_IM/lk041509_R_bucket -fbuc 'Group_ROI_IM/Brewer_lk041509_bucket_ms_IM+tlrc[3..1287(6)]'
+3dbucket -prefix Group_ROI_IM/lk041509_K_bucket -fbuc 'Group_ROI_IM/Brewer_lk041509_bucket_ms_IM+tlrc[1294..1414(6)]'
+
+#mj
+3dbucket -prefix Group_ROI_IM/mj043009_R_bucket -fbuc 'Group_ROI_IM/Brewer_mj043009_bucket_ms_IM+tlrc[3..1119(6)]'
+3dbucket -prefix Group_ROI_IM/mj043009_K_bucket -fbuc 'Group_ROI_IM/Brewer_mj043009_bucket_ms_IM+tlrc[1126..1330(6)]'
+
+#ng
+3dbucket -prefix Group_ROI_IM/041609_R_bucket -fbuc 'Group_ROI_IM/Brewer_ng041609_bucket_ms_IM+tlrc[3..561(6)]'
+3dbucket -prefix Group_ROI_IM/ng041609_K_bucket -fbuc 'Group_ROI_IM/Brewer_ng041609_bucket_ms_IM+tlrc[568..1220(6)]'
+
+#rb
+3dbucket -prefix Group_ROI_IM/rb041409_R_bucket -fbuc 'Group_ROI_IM/Brewer_rb041409_bucket_ms_IM+tlrc[3..1359(6)]'
+3dbucket -prefix Group_ROI_IM/rb041409_K_bucket -fbuc 'Group_ROI_IM/Brewer_rb041409_bucket_ms_IM+tlrc[1366..1438(6)]'
+
+#sk
+3dbucket -prefix Group_ROI_IM/sk041709_R_bucket -fbuc 'Group_ROI_IM/Brewer_sk041709_bucket_ms_IM+tlrc[3..597(6)]'
+3dbucket -prefix Group_ROI_IM/sk041709_K_bucket -fbuc 'Group_ROI_IM/Brewer_sk041709_bucket_ms_IM+tlrc[604..790(6)]'
+
+#sm
+3dbucket -prefix Group_ROI_IM/sm042709_R_bucket -fbuc 'Group_ROI_IM/Brewer_sm042709_bucket_ms_IM+tlrc[3..1185(6)]'
+3dbucket -prefix Group_ROI_IM/sm042709_K_bucket -fbuc 'Group_ROI_IM/Brewer_sm042709_bucket_ms_IM+tlrc[1192..1336(6)]'

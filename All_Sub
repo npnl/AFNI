@@ -1,0 +1,46 @@
+#!/bin/bash
+# Run from Memory_Strength
+
+#for s in sk041709 mj043009 ng041609 jf042809 sm042709 ec041709 am041609 rb041409 es041509 lk041509 aw043009 gg043009 
+
+#do
+
+#cd Brewer_${s}
+
+# Run roidemons
+
+#/home/sarahi/roidemons -model /home/sarahi/mtl_model_notp.nii -subj Brewer_${s}_ROI -struct_name ANAT_rot -func Brewer_${s}_RK_RK_AM_iresp+tlrc -func Brewer_${s}_RK_RK_AM2_iresp+tlrc -wb
+
+#cd Brewer_${s}_ROI
+
+#cp *RK_AM*postDemons* ../../Analysis_ROI_AM
+
+#cd ../../
+
+#done
+
+
+for s in sk041709 mj043009 ng041609 jf042809 sm042709 ec041709 am041609 rb041409 es041509 lk041509 aw043009 gg043009 
+
+do
+
+
+
+# Run roidemons
+
+3dbucket -prefix Brewer_${s}/Brewer_${s}_ROI/Brewer_${s}_bucket_F_RK_AM2 -fbuc Brewer_${s}/Brewer_${s}_ROI/Brewer_${s}_bucket_RK_ms_AM+tlrc'[0]'
+3dbucket -prefix Brewer_${s}/Brewer_${s}_ROI/Brewer_${s}_bucket_F_AM -fbuc Brewer_${s}/Brewer_${s}_ROI/Brewer_${s}_bucket_ms_AM+tlrc'[0]'
+
+cd Brewer_${s}
+
+/home/sarahi/roidemons -model /home/sarahi/mtl_model_notp.nii -subj Brewer_${s}_ROI -struct_name ANAT_rot -func Brewer_${s}_bucket_F_RK_AM2 -func Brewer_${s}_bucket_F_AM -wb
+
+cd Brewer_${s}_ROI
+
+cp *F*postDemons* ../../Analysis_ROI_AM
+
+cd ../../
+
+done
+
+

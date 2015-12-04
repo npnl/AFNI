@@ -1,0 +1,70 @@
+#!/bin/bash
+
+# Filename: waver3dDeconvolve.sh
+# Purpose: Run preprocessing steps; Run waver to produce ideal response
+#          function (IRF); Run 3dDeconvolve to obtain parameter estimates
+#          and calculate contrasts for PA Recall experiment.
+# Created: 6/20/06
+# Creator: Tyler Seibert
+# Usage: ./waver3dDeconvolve.sh
+
+ver=ms # This version mark is appended to data sets written by this script
+
+
+for s in mj043009 ng041609
+# jf042809 sm042709 ec041709 sk041709 am041609 rb041409 es041509 lk041509 aw043009 gg043009 
+do
+
+
+
+cd /space/mdj1/1/data/sarah/Memory_Strength/Brewer_${s}/AFNIfiles
+echo "working in $PWD"
+
+#cp finalstage_ms/ScFrBlVrTs_Run* ./
+
+3dDeconvolve -polort 1 \
+    -input ScFrBlVrTs_Run1_${ver}+orig ScFrBlVrTs_Run2_${ver}+orig \
+           ScFrBlVrTs_Run3_${ver}+orig ScFrBlVrTs_Run4_${ver}+orig \
+    -num_stimts 9 \
+    -stim_file 1 AllRuns_Onset_RT_RK_missingrun'[0]' -stim_label 1 "R_greaterthan_Kminus" \
+    -stim_file 2 AllRuns_Onset_RT_RK_missingrun'[1]' -stim_label 2 "K_lessthan_Rplus" \
+    -stim_file 3 AllRuns_Onset_RT_RK_missingrun'[2]' -stim_label 3 "Other" \
+    -stim_file 4 AllRuns_motion_${ver}'[0]' -stim_base 4 \
+    -stim_file 5 AllRuns_motion_${ver}'[1]' -stim_base 5 \
+    -stim_file 6 AllRuns_motion_${ver}'[2]' -stim_base 6 \
+    -stim_file 7 AllRuns_motion_${ver}'[3]' -stim_base 7 \
+    -stim_file 8 AllRuns_motion_${ver}'[4]' -stim_base 8 \
+    -stim_file 9 AllRuns_motion_${ver}'[5]' -stim_base 9 \
+    -stim_minlag 1 0 -stim_maxlag 1 9 \
+    -stim_minlag 2 0 -stim_maxlag 2 9 \
+    -stim_minlag 3 0 -stim_maxlag 3 9 \
+    -iresp 1 "R_greaterthan_Kminus_missing_iresp" \
+    -iresp 2 "K_lessthan_Rplus_missing_iresp" \
+    -fout -tout -nobout -xjpeg Xmat_${ver} \
+    -bucket bucket_RT_RK_missing_${ver} \
+    -xsave \
+    -GOFORIT 15 \
+    -num_glt 3 \
+    -gltsym 'SYM: +R_greaterthan_Kminus' -glt_label 1 R_greaterthan_Kminus \
+    -gltsym 'SYM: +K_lessthan_Rplus' -glt_label 2 K_lessthan_Rplus \
+    -gltsym 'SYM: +R_greaterthan_Kminus -K_lessthan_Rplus' -glt_label 3 R+-K- \
+    -censor censor_motion.txt
+
+
+# Adwarp new BL files and iresp files
+
+
+adwarp -apar ANAT_rot+tlrc -dpar bucket_RT_RK_missing_${ver}+orig \
+-prefix /space/mdj1/1/data/sarah/Memory_Strength/Brewer_${s}/Brewer_${s}_ROI/${s}_bucket_RT_RK_missing_${ver} \
+-dxyz 4.0 -thr NN -func Bk
+
+
+adwarp -apar ANAT_rot+tlrc -dpar R_greaterthan_Kminus_missing_iresp+orig \
+-prefix /space/mdj1/1/data/sarah/Memory_Strength/Brewer_${s}/Brewer_${s}_ROI/Brewer_${s}_R_greaterthan_Kminus_missing_iresp \
+-dxyz 4.0 -thr NN -func Bk
+
+adwarp -apar ANAT_rot+tlrc -dpar K_lessthan_Rplus_missing_iresp+orig \
+-prefix /space/mdj1/1/data/sarah/Memory_Strength/Brewer_${s}/Brewer_${s}_ROI/Brewer_${s}_K_lessthan_Rplus_missing_iresp \
+-dxyz 4.0 -thr NN -func Bk
+
+done

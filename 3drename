@@ -1,0 +1,14 @@
+#!/bin/csh
+
+foreach subject (am041609 aw043009 ec041709 es041509 gg043009 jf042809 lk041509 mj043009 ng041609 rb041409 sk041709 sm042709)
+
+
+foreach condition ( R K I NC NI )
+
+3drename newiresp_${subject}_${condition}plus_postDemons+tlrc Brewer_${subject}_${condition}plus_.5_iresp_postDemons
+
+
+end
+
+
+end

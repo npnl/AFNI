@@ -1,0 +1,9 @@
+What to do to analyze Memory_Strength
+
+1. Copy data from cfmri
+2. Make labels for s folders
+3. Run ../../ppge4 from Brewer_SID/AFNIfiles
+4. ACPC and Talairach
+5. Run pa3dDeconvolve.sh
+6. Draw MTL ROIs
+7. Run ROIAL postDemons script on buckets and iresps

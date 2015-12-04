@@ -1,0 +1,77 @@
+#!/bin/tcsh
+#
+#run in Analysis_FC
+@ i = 0
+
+#done for p=.05 (1.997), p=.01 (2.695), and p=.001 (3.525)
+
+set cond = ( Contrast_3cond )
+set d = ( 26 )
+set t = ( 27 )
+
+foreach c ( `echo $cond` )
+
+
+@ i++
+echo "$i $c $d[$i] $t[$i]"
+
+#.05
+
+3dmerge \
+-1thresh 1.997 \
+-1clust 7.0 60 \
+-1dindex $d[$i] \
+-1tindex $t[$i] \
+-prefix Clust_ANOVA2.05_7-60_${c}_12subj \
+bucket_ANOVA2-3cond_inc_12subj+tlrc
+
+3dmerge \
+-1thresh 1.997 \
+-1clust_order 7.0 60 \
+-1dindex $d[$i] \
+-1tindex $t[$i] \
+-prefix Clustorder_ANOVA2.05_7-60_${c}_12subj \
+bucket_ANOVA2-3cond_inc_12subj+tlrc
+
+3dclust -1dindex $d[$i] -1tindex $t[$i] -1thresh 1.997 -prefix Clust_ANOVA2.05_7-60_${c}_12subj 7.0 60 bucket-ANOVA2_3cond_inc_12subj+tlrc > Tables/Clust_ANOVA2.05_7-60_${c}_12subj+tlrc.txt
+
+#.01
+
+3dmerge \
+-1thresh 2.695 \
+-1clust 7.0 60 \
+-1dindex $d[$i] \
+-1tindex $t[$i] \
+-prefix Clust_ANOVA2.01_7-60_${c}_12subj \
+bucket_ANOVA2_inc_12subj+tlrc
+
+3dmerge \
+-1thresh 2.695 \
+-1clust_order 7.0 60 \
+-1dindex $d[$i] \
+-1tindex $t[$i] \
+-prefix Clustorder_ANOVA2.01_7-60_${c}_12subj \
+bucket_ANOVA2-switch_inc_12subj+tlrc
+
+3dclust -1dindex $d[$i] -1tindex $t[$i] -1thresh 2.695 -prefix Clust_ANOVA2.01_7-60_${c}_12subj 7.0 60 bucket_ANOVA2_inc_12subj+tlrc > Tables/Clust_ANOVA2.01_7-60_${c}_12subj+tlrc.txt
+
+#.001
+
+3dmerge \
+-1thresh 3.525 \
+-1clust 7.0 60 \
+-1dindex $d[$i] \
+-1tindex $t[$i] \
+-prefix Clust_ANOVA2.001_7-60_${c}_12subj \
+bucket_ANOVA2-switch_inc_12subj+tlrc
+
+3dmerge \
+-1thresh 3.525 \
+-1clust_order 7.0 60 \
+-1dindex $d[$i] \
+-1tindex $t[$i] \
+-prefix Clustorder_ANOVA2.001_7-60_${c}_12subj \
+bucket_ANOVA2_inc_12subj+tlrc
+
+3dclust -1dindex $d[$i] -1tindex $t[$i] -1thresh 3.525 -prefix Clust_ANOVA2.001_7-60_${c}_12subj 7.0 60 bucket_ANOVA2-switch_inc_12subj+tlrc > Tables/Clust_ANOVA2.001_7-60_${c}_12subj+tlrc.txt
+

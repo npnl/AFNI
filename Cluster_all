@@ -1,0 +1,97 @@
+#!/bin/tcsh
+#
+#run in Analysis_FC
+@ i = 0
+
+#done for p=.05 (2.201), p=.01 (3.106), and p=.001 (4.437)
+
+set cond = ( R K NC R-K R+K )
+foreach c ( `echo $cond` )
+
+
+@ i++
+#echo "$i $c"
+
+#.05
+
+3dmerge \
+-1thresh 2.201 \
+-1clust 4.0 200 \
+-1dindex 0 \
+-1tindex 1 \
+-prefix Clust_ttest.05_${c}_12subj \
+ttest_${c}_AM_12subj+tlrc
+
+3dmerge \
+-1thresh 2.201 \
+-1clust_order 4.0 200 \
+-1dindex 0 \
+-1tindex 1 \
+-prefix Clustorder_ttest.05_${c}_12subj \
+ttest_${c}_AM_12subj+tlrc
+
+3dclust -1dindex 0 -1tindex 1 -1thresh 2.201 -prefix Clust_ttest.05_${c}_12subj 4.0 200 ttest_${c}_AM_12subj+tlrc > Tables/Clust_ttest.05_${c}_12subj+tlrc.txt
+
+#.01
+
+3dmerge \
+-1thresh 3.106 \
+-1clust 4.0 200 \
+-1dindex 0 \
+-1tindex 1 \
+-prefix Clust_ttest.01_${c}_12subj \
+ttest_${c}_AM_12subj+tlrc
+
+3dmerge \
+-1thresh 3.106 \
+-1clust_order 4.0 200 \
+-1dindex 0 \
+-1tindex 1 \
+-prefix Clustorder_ttest.01_${c}_12subj \
+ttest_${c}_AM_12subj+tlrc
+
+3dclust -1dindex 0 -1tindex 1 -1thresh 3.106 -prefix Clust_ttest.01_${c}_12subj 4.0 200 ttest_${c}_AM_12subj+tlrc > Tables/Clust_ttest.01_${c}_12subj+tlrc.txt
+
+#.001
+
+3dmerge \
+-1thresh 4.437 \
+-1clust 4.0 200 \
+-1dindex 0 \
+-1tindex 1 \
+-prefix Clust_ttest.001_${c}_12subj \
+ttest_${c}_AM_12subj+tlrc
+
+3dmerge \
+-1thresh 4.437 \
+-1clust_order 4.0 200 \
+-1dindex 0 \
+-1tindex 1 \
+-prefix Clustorder_ttest.001_${c}_12subj \
+ttest_${c}_AM_12subj+tlrc
+
+3dclust -1dindex 0 -1tindex 1 -1thresh 4.437 -prefix Clust_ttest.001_${c}_12subj 4.0 200 ttest_${c}_AM_12subj+tlrc > Tables/Clust_ttest.001_${c}_12subj+tlrc.txt
+
+
+#.005
+
+3dmerge \
+-1thresh 3.497 \
+-1clust 4.0 200 \
+-1dindex 0 \
+-1tindex 1 \
+-prefix Clust_ttest.005_${c}_12subj \
+ttest_${c}_AM_12subj+tlrc
+
+3dmerge \
+-1thresh 3.497 \
+-1clust_order 4.0 200 \
+-1dindex 0 \
+-1tindex 1 \
+-prefix Clustorder_ttest.005_${c}_12subj \
+ttest_${c}_AM_12subj+tlrc
+
+3dclust -1dindex 0 -1tindex 1 -1thresh 3.497 -prefix Clust_ttest.005_${c}_12subj 4.0 200 ttest_${c}_AM_12subj+tlrc > Tables/Clust_ttest.005_${c}_12subj+tlrc.txt
+
+
+end

@@ -1,0 +1,48 @@
+#!/bin/bash
+
+for s in ng041609 rb041409 es041509 lk041509 aw043009 gg043009 mj043009 jf042809 sm042709 ec041709 sk041709 am041609 
+do
+
+cd Brewer_${s}/AFNIfiles
+ver=ms_IM
+
+
+# 3dDeconvolve using waver-generated IRF and Pre-processed data
+3dDeconvolve -polort 3 \
+    -input ScFrBlVrTs_Run1_ms+orig ScFrBlVrTs_Run2_ms+orig ScFrBlVrTs_Run3_ms+orig ScFrBlVrTs_Run4_ms+orig \
+    -num_stimts 11 \
+    -local_times \
+    -stim_times_IM 1 stim_times_1.1D_A.1D 'TENT(0,15,3)' \
+    -stim_label 1 R \
+    -stim_times_IM 2 stim_times_2.1D_A.1D 'TENT(0,15,3)' \
+    -stim_label 2 K \
+    -stim_times_IM 3 stim_times_3.1D_A.1D 'TENT(0,15,3)' \
+    -stim_label 3 I \
+    -stim_times_IM 4 stim_times_4.1D_A.1D 'TENT(0,15,3)' \
+    -stim_label 4 NC \
+    -stim_times_IM 5 stim_times_5.1D_A.1D 'TENT(0,15,3)' \
+    -stim_label 5 NI \
+    -stim_file 6 AllRuns_motion_ms'[0]' -stim_base 6               \
+    -stim_file 7 AllRuns_motion_ms'[1]' -stim_base 7               \
+    -stim_file 8 AllRuns_motion_ms'[2]' -stim_base 8               \
+    -stim_file 9 AllRuns_motion_ms'[3]' -stim_base 9               \
+    -stim_file 10 AllRuns_motion_ms'[4]' -stim_base 10             \
+    -stim_file 11 AllRuns_motion_ms'[5]' -stim_base 11             \
+    -fout -tout -x1D X.xmat.1D -xjpeg X.jpg -xsave                 \
+    -fitts fitts_${ver}                                            \
+    -bucket bucket_newafni_${ver}                                          \
+    -allzero_OK                                                    \
+    -GOFORIT 10 						   \
+    -censor censor_motion.txt                                      \
+
+
+
+adwarp -apar ANAT_rot+tlrc -dpar bucket_newafni_${ver}+orig \
+-prefix /space/mdj1/1/data/sarah/Memory_Strength/Brewer_${s}/Brewer_${s}_ROI/Brewer_${s}_bucket_newafni_${ver} \
+-dxyz 4.0 -thr NN -func Bk
+
+
+
+cd ../../
+
+done

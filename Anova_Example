@@ -1,0 +1,25 @@
+3dANOVA3 -type 5 -alevels 2 -blevels 2 -clevels N \
+		
+-dset 1 1 1 ../Group/'01_pvt_n_GLM_new_FWHM4+tlrc[0]' \
+-dset 1 2 1 ../Group/'01_pvt_n_GLM_new_FWHM4+tlrc[1]' \
+-dset 2 1 1 ../Group/'01_pvt_tsdP_GLM_new_FWHM4+tlrc[0]' \
+-dset 2 2 1 ../Group/'01_pvt_tsdP_GLM_new_FWHM4+tlrc[1]' \
+-dset 1 1 2 ../Group/'03_pvt_n_GLM_new_FWHM4+tlrc[0]' \
+-dset 1 2 2 ../Group/'03_pvt_n_GLM_new_FWHM4+tlrc[1]' \
+-dset 2 1 2 ../Group/'03_pvt_tsdP_GLM_new_FWHM4+tlrc[0]' \
+-dset 2 2 2 ../Group/'03_pvt_tsdP_GLM_new_FWHM4+tlrc[1]' \
+
+ \
+-fa Night \
+-fb Speed \
+-fab NTxSpeed \
+-amean 1 Norm \
+-amean 2 Placebo \
+-adiff 2 1 Plac-Norm \
+-bmean 1 Slow \
+-bmean 2 Fast \
+-bdiff 1 2 Slow-Fast \
+-bucket ../Group/Analyses/PVT_ANOVA_FWHM4_Ceph_Smerf_20subj
+
+
+

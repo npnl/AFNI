@@ -1,0 +1,7 @@
+
+3dcalc -a ttest_CorInc_Remember-Cor_12subj+tlrc'[1]' -b ttest_CorInc_Know-Cor_12subj+tlrc'[1]' -expr 'step(a-2.201)+2*step(b-2.201)+4*step(2.201-abs(a))+8*step(2.201-abs(b))' -prefix conj_ROIAL_SupRec.05
+
+
+3dcalc -a ttest_CorInc_Remember-Cor_12subj+tlrc'[1]' -b ttest_CorInc_Know-Cor_12subj+tlrc'[1]' -expr 'step(a-3.106)+2*step(b-3.106)+4*step(3.106-abs(a))+8*step(3.106-abs(b))' -prefix conj_ROIAL_SupRec.01
+
+

@@ -1,0 +1,35 @@
+#!/bin/tcsh
+#
+#Run from Group_ROI_*
+#Run T-tests
+
+
+@ i = 0
+set subB = ( 0 )
+set cond = ( DN )
+
+foreach c ( `echo $cond` )
+
+@ i++
+echo "$i $c $subB[$i]"
+
+3dttest \
+-session ../Analysis_ROI_HC+DN \
+-prefix ttest_${c}_12subj \
+-base1 0.0 \
+-set2 \
+am041609_bucket_DN_ms_postDemons+tlrc'['$subB[$i]']' \
+aw043009_bucket_DN_ms_postDemons+tlrc'['$subB[$i]']' \
+ec041709_bucket_DN_ms_postDemons+tlrc'['$subB[$i]']' \
+es041509_bucket_DN_ms_postDemons+tlrc'['$subB[$i]']' \
+gg043009_bucket_DN_ms_postDemons+tlrc'['$subB[$i]']' \
+jf042809_bucket_DN_ms_postDemons+tlrc'['$subB[$i]']' \
+lk041509_bucket_DN_ms_postDemons+tlrc'['$subB[$i]']' \
+mj043009_bucket_DN_ms_postDemons+tlrc'['$subB[$i]']' \
+ng041609_bucket_DN_ms_postDemons+tlrc'['$subB[$i]']' \
+rb041409_bucket_DN_ms_postDemons+tlrc'['$subB[$i]']' \
+sk041709_bucket_DN_ms_postDemons+tlrc'['$subB[$i]']' \
+sm042709_bucket_DN_ms_postDemons+tlrc'['$subB[$i]']' \
+
+end
+

@@ -1,0 +1,69 @@
+#run from fMRI
+#a set 1=Correct 2=Incorrect  
+#b set 1 = suppress, 2 = recall 
+
+
+3dANOVA2 \
+-type 1 \
+-alevels 2 \
+-blevels 2 \
+-dset 1 1 Group_ROIAL_submem-inc/dp042508_bucket_inc_pas_postDemons+tlrc'[165]' \
+-dset 1 1 Group_ROIAL_submem-inc/ee050308_bucket_inc_pas_postDemons+tlrc'[165]' \
+-dset 1 1 Group_ROIAL_submem-inc/ic042208_bucket_inc_pas_postDemons+tlrc'[165]' \
+-dset 1 1 Group_ROIAL_submem-inc/jr050308_bucket_inc_pas_postDemons+tlrc'[165]' \
+-dset 1 1 Group_ROIAL_submem-inc/lk042408_bucket_inc_pas_postDemons+tlrc'[165]' \
+-dset 1 1 Group_ROIAL_submem-inc/mo050508_bucket_inc_pas_postDemons+tlrc'[165]' \
+-dset 1 1 Group_ROIAL_submem-inc/nb050308_bucket_inc_pas_postDemons+tlrc'[165]' \
+-dset 1 1 Group_ROIAL_submem-inc/nv042908_bucket_inc_pas_postDemons+tlrc'[165]' \
+-dset 1 1 Group_ROIAL_submem-inc/qg042308_bucket_inc_pas_postDemons+tlrc'[165]' \
+-dset 1 1 Group_ROIAL_submem-inc/rb050108_bucket_inc_pas_postDemons+tlrc'[165]' \
+-dset 1 1 Group_ROIAL_submem-inc/sn042808_bucket_inc_pas_postDemons+tlrc'[165]' \
+-dset 1 1 Group_ROIAL_submem-inc/sr050508_bucket_inc_pas_postDemons+tlrc'[165]' \
+-dset 1 2 Group_ROIAL_submem-inc/dp042508_bucket_inc_pas_postDemons+tlrc'[168]' \
+-dset 1 2 Group_ROIAL_submem-inc/ee050308_bucket_inc_pas_postDemons+tlrc'[168]' \
+-dset 1 2 Group_ROIAL_submem-inc/ic042208_bucket_inc_pas_postDemons+tlrc'[168]' \
+-dset 1 2 Group_ROIAL_submem-inc/jr050308_bucket_inc_pas_postDemons+tlrc'[168]' \
+-dset 1 2 Group_ROIAL_submem-inc/lk042408_bucket_inc_pas_postDemons+tlrc'[168]' \
+-dset 1 2 Group_ROIAL_submem-inc/mo050508_bucket_inc_pas_postDemons+tlrc'[168]' \
+-dset 1 2 Group_ROIAL_submem-inc/nb050308_bucket_inc_pas_postDemons+tlrc'[168]' \
+-dset 1 2 Group_ROIAL_submem-inc/nv042908_bucket_inc_pas_postDemons+tlrc'[168]' \
+-dset 1 2 Group_ROIAL_submem-inc/qg042308_bucket_inc_pas_postDemons+tlrc'[168]' \
+-dset 1 2 Group_ROIAL_submem-inc/rb050108_bucket_inc_pas_postDemons+tlrc'[168]' \
+-dset 1 2 Group_ROIAL_submem-inc/sn042808_bucket_inc_pas_postDemons+tlrc'[168]' \
+-dset 1 2 Group_ROIAL_submem-inc/sr050508_bucket_inc_pas_postDemons+tlrc'[168]' \
+-dset 2 1 Group_ROIAL_submem-inc/dp042508_bucket_inc_pas_postDemons+tlrc'[174]' \
+-dset 2 1 Group_ROIAL_submem-inc/ee050308_bucket_inc_pas_postDemons+tlrc'[174]' \
+-dset 2 1 Group_ROIAL_submem-inc/ic042208_bucket_inc_pas_postDemons+tlrc'[174]' \
+-dset 2 1 Group_ROIAL_submem-inc/jr050308_bucket_inc_pas_postDemons+tlrc'[174]' \
+-dset 2 1 Group_ROIAL_submem-inc/lk042408_bucket_inc_pas_postDemons+tlrc'[174]' \
+-dset 2 1 Group_ROIAL_submem-inc/mo050508_bucket_inc_pas_postDemons+tlrc'[174]' \
+-dset 2 1 Group_ROIAL_submem-inc/nb050308_bucket_inc_pas_postDemons+tlrc'[174]' \
+-dset 2 1 Group_ROIAL_submem-inc/nv042908_bucket_inc_pas_postDemons+tlrc'[174]' \
+-dset 2 1 Group_ROIAL_submem-inc/qg042308_bucket_inc_pas_postDemons+tlrc'[174]' \
+-dset 2 1 Group_ROIAL_submem-inc/rb050108_bucket_inc_pas_postDemons+tlrc'[174]' \
+-dset 2 1 Group_ROIAL_submem-inc/sn042808_bucket_inc_pas_postDemons+tlrc'[174]' \
+-dset 2 1 Group_ROIAL_submem-inc/sr050508_bucket_inc_pas_postDemons+tlrc'[174]' \
+-dset 2 2 Group_ROIAL_submem-inc/dp042508_bucket_inc_pas_postDemons+tlrc'[177]' \
+-dset 2 2 Group_ROIAL_submem-inc/ee050308_bucket_inc_pas_postDemons+tlrc'[177]' \
+-dset 2 2 Group_ROIAL_submem-inc/ic042208_bucket_inc_pas_postDemons+tlrc'[177]' \
+-dset 2 2 Group_ROIAL_submem-inc/jr050308_bucket_inc_pas_postDemons+tlrc'[177]' \
+-dset 2 2 Group_ROIAL_submem-inc/lk042408_bucket_inc_pas_postDemons+tlrc'[177]' \
+-dset 2 2 Group_ROIAL_submem-inc/mo050508_bucket_inc_pas_postDemons+tlrc'[177]' \
+-dset 2 2 Group_ROIAL_submem-inc/nb050308_bucket_inc_pas_postDemons+tlrc'[177]' \
+-dset 2 2 Group_ROIAL_submem-inc/nv042908_bucket_inc_pas_postDemons+tlrc'[177]' \
+-dset 2 2 Group_ROIAL_submem-inc/qg042308_bucket_inc_pas_postDemons+tlrc'[177]' \
+-dset 2 2 Group_ROIAL_submem-inc/rb050108_bucket_inc_pas_postDemons+tlrc'[177]' \
+-dset 2 2 Group_ROIAL_submem-inc/sn042808_bucket_inc_pas_postDemons+tlrc'[177]' \
+-dset 2 2 Group_ROIAL_submem-inc/sr050508_bucket_inc_pas_postDemons+tlrc'[177]' \
+-ftr Condition \
+-fa CorInc \
+-fb SupRec \
+-fab CorInc_SupRec_Interaction \
+-amean 1 mean_Correct \
+-amean 2 mean_Incorrect \
+-bmean 1 mean_Suppress \
+-bmean 2 mean_Recall \
+-adiff 1 2 Cor-Inc \
+-bdiff 2 1 Rec-Sup \
+-xcontr -.5 -.5 .5 .5 Contrast \
+-bucket Analysis_ROIAL_submem-inc/bucket_ANOVA2_inc_12subj
